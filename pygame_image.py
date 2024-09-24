@@ -16,12 +16,13 @@ def main():
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT: return
+        x = -(tmr % 800)
 
-        screen.blit(bg_img, [-tmr, 0])
+        screen.blit(bg_img, [x, 0])
         screen.blit(kk_img, [300, 200]) #練習４
         pg.display.update()
         tmr += 1        
-        clock.tick(200)
+        clock.tick(200) #練習5
 
 
 if __name__ == "__main__":
